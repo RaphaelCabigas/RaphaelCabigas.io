@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raphael Cabigas - Contact</title>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="/Global CSS & Javascript/globalstyle.css">
+</head>
+
+<body>
+    <!-----LOGO----->
+    <a href="../index.html" id="logo">RC<sup>3</sup></a>
+
+    <!-----MENU----->
+    <div id="menu-btn" onclick="toggleMenu()"></div>
+
+    <!-----MASK: used to hide the content that passes outside the frame----->
+    <div id="mask">
+    </div>
+
+    <!-----BORDER----->
+    <div id="frame-wrapper">
+        <div id="theme-container">
+            <div class="theme-wrapper">
+                <div class="theme-text">
+                    LIGHT
+                </div>
+                <div class="theme-button" id="light-mode">
+                </div>
+            </div>
+            <div class="theme-wrapper">
+                <div class="theme-text">
+                    DARK
+                </div>
+                <div class="theme-button" id="dark-mode">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main id="contact">
+        <div id="contact-texts">
+            <div id="contact-heading">LET'S MAKE YOUR PROJECT A REALITY.</div>
+            <div>
+                <div>
+                    Got any more questions?
+                </div>
+                <div id="email-icon">
+                </div>
+            </div>
+        </div>
+        <form>
+            <div class="label-input">
+                <label for="name">Your Name<span class="req">*</span></label>
+                <input type="text" name="name" id="name" placeholder="Raphael Cabigas" required>
+            </div>
+            <div class="label-input">
+                <label for="email">Email<span class="req">*</span></label>
+                <input type="text" name="email" placeholder="yourname@gmail.com" required>
+            </div>
+            <div class="label-input">
+                <label for="details">Details about the project<span class="req">*</span></label>
+                <textarea name="details" id="details" placeholder="Brief summary, timeframe, objectives, etc."
+                    required></textarea>
+            </div>
+            <button type="submit" id="submit-btn">SUBMIT</button>
+        </form>
+    </main>
+</body>
+<script src="/Global CSS & Javascript/globalscript.js"></script>
+
+</html>
