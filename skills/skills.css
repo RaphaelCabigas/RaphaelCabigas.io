@@ -1,0 +1,262 @@
+.intro-downward {
+    display: flex;
+    justify-content: center;
+    font-family: Mont-H;
+    align-items: center;
+    font-size: 100px;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(grain.svg);
+    background-color: var(--white-clr);
+    z-index: 1000;
+    animation: intro-animation 1.5s ease forwards;
+}
+
+.intro-text {
+    color: var(--bg-clr);
+}
+
+@keyframes intro-animation {
+    0% {
+        transform: translateY(0%);
+    }
+
+    100% {
+        transform: translateY(100%);
+    }
+
+}
+
+section {
+    height: 100vh;
+    width: 80vw;
+    margin-inline: auto;
+    gap: 130px;
+    scroll-snap-align: start;
+}
+
+body,
+html {
+    scroll-snap-points-y: repeat(100vh);
+    scroll-snap-type: y proximity;
+    scroll-behavior: smooth;
+
+}
+
+.skills-section,
+.certifcates-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*----------SKILLS SECTION--------*/
+/*----------SKILLS SECTION--------*/
+
+.skill-heading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+}
+
+.xl-skill-heading {
+    font-family: Mont-H;
+    font-size: 120px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.l-skill-heading {
+    font-family: Mont-H;
+    font-size: 35px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.skills-list-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.skills-list {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+.skill-item {
+    font-size: 25px;
+    padding: 20px;
+}
+
+.skills-text-wrapper {
+    display: grid;
+    place-items: center;
+    grid-template-columns: 1fr 1fr;
+}
+
+.skill-text {
+    font-size: 30px;
+    line-height: 35px;
+}
+
+.skill-box {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+}
+
+/*----------EDUCATION SECTION--------*/
+/*----------EDUCATION SECTION--------*/
+#education-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0;
+}
+
+#edu-heading {
+    font-size: 120px;
+}
+
+#edu-details-rows {
+    display: flex;
+    flex-direction: column;
+}
+
+.edu-details-container {
+    border: 1px dashed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.edu-wrapper {
+    width: 80%;
+    padding: 30px;
+}
+
+.country,
+.course {
+    text-align: right;
+}
+
+.school-name,
+.course {
+    font-size: 25px;
+}
+
+/*----------CERTIFICATES SECTION--------*/
+/*----------CERTIFICATES SECTION--------*/
+
+#certifcates-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+#cert-heading-container {
+    display: grid;
+    grid-template-rows: 60vh 10vh;
+}
+
+#cert-icons {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+}
+
+/*----------CERTIFICATE CAROUSEL--------*/
+/*----------CERTIFICATE CAROUSEL--------*/
+
+.cert-flow {
+    width: 100%;
+    height: 70vh;
+    margin: auto 0;
+    position: relative;
+    overflow: hidden;
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0));
+}
+
+.cert-flow:hover .cert-item {
+    animation-play-state: paused;
+}
+
+.cert-flow:hover>.cert-item {
+    opacity: 0.4;
+    transition: opacity 0.3s ease;
+}
+
+.cert-flow>.cert-item:hover {
+    opacity: 1;
+}
+
+@keyframes scrollTop {
+    to {
+        top: -500px;
+    }
+}
+
+.cert-item {
+    transition: 0.3s ease;
+    /* Smooth transition effect */
+    width: inherit;
+    height: inherit;
+    object-fit: contain;
+    position: absolute;
+    bottom: calc(600px * 8);
+    animation-timing-function: linear;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+.cert-item {
+    top: max(calc(600px * 1.5), 100%);
+    animation-name: scrollTop;
+}
+
+.item1 {
+    animation-delay: calc(20s / 3 * (4 - 1) * -1);
+}
+
+.item2 {
+    animation-delay: calc(20s / 3 * (4 - 2) * -1);
+}
+
+.item3 {
+    animation-delay: calc(20s / 3 * (4 - 3) * -1);
+}
+
+.item4 {
+    animation-delay: calc(20s / 4 * (4 - 4) * -1);
+}
+
+/*--------FOOTER-------*/
+/*--------FOOTER-------*/
+
+#skill-footer {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    place-items: center;
+    position: relative;
+}
+
+#back-to-top {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--white-clr);
+}
+
+#credits {
+    position: absolute;
+    letter-spacing: 1px;
+    left: 0;
+    bottom: 20;
+}
