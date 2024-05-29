@@ -6,36 +6,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Raphael Cabigas - Contact</title>
     <link rel="stylesheet" href="contact.css">
-    <link rel="stylesheet" href="/Main CSS and JS/globalstyle.css">
+    <link rel="stylesheet" href="/Main CSS and JS/style.css">
 </head>
 
 <body>
     <!-----LOGO----->
-    <a href="../index.html" id="logo">RC<sup>3</sup></a>
+    <a href="../index.html" id="logo">RC3</a>
 
     <!-----MENU----->
-    <div id="menu-btn" onclick="toggleMenu()"></div>
+    <div id="menu-btn" onclick="toggleMenu()"><svg xmlns="http://www.w3.org/2000/svg" width="29" height="90"
+            viewBox="0 0 29 90" fill="none">
+            <line x1="0.5" y1="90" x2="0.5" y2="-4.52995e-06" stroke="white" />
+            <line x1="28.5" y1="90" x2="28.5" y2="-4.52995e-06" stroke="white" />
+            <line x1="14.5" y1="90" x2="14.5" y2="-4.52995e-06" stroke="white" />
+        </svg></div>
 
     <!-----MASK: used to hide the content that passes outside the frame----->
     <div id="mask">
     </div>
 
-    <!-----BORDER----->
+    <!-----FRAME----->
     <div id="frame-wrapper">
-        <div id="theme-container">
-            <div class="theme-wrapper">
-                <div class="theme-text">
-                    LIGHT
-                </div>
-                <div class="theme-button" id="light-mode">
-                </div>
+    </div>
+
+    <!-----THEME BUTTONS----->
+    <div id="theme-container">
+        <div class="theme-wrapper" id="light-mode" onclick="lightMode()">
+            <div class="theme-text">
+                LIGHT
             </div>
-            <div class="theme-wrapper">
-                <div class="theme-text">
-                    DARK
-                </div>
-                <div class="theme-button" id="dark-mode">
-                </div>
+            <div class="theme-btn" id="light-btn">
+            </div>
+        </div>
+        <div class="theme-wrapper" id="dark-mode" onclick="darkMode()">
+            <div class="theme-text">
+                DARK
+            </div>
+            <div class="theme-btn" id="dark-btn">
             </div>
         </div>
     </div>
@@ -69,6 +76,6 @@
         </form>
     </main>
 </body>
-<script src="Main CSS and JS/globalscript.js"></script>
+<script src="/Main CSS and JS/script.js"></script>
 
 </html>
