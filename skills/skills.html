@@ -4,27 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Raphael Cabigas - Skills</title>
+    <title>Raphael Cabigas Skills</title>
     <link rel="stylesheet" href="skills.css">
-    <link rel="stylesheet" href="/Main CSS and JS/globalstyle.css">
+    <link rel="stylesheet" href="/Main CSS and JS/style.css">
 </head>
 
 <body>
-    <!--<div class="intro-downward">
-        <h1 class="intro-text">SKILLS</h1>
-    </div>
-    <nav id="open-menu">
-        <div class="menu-item">HOME</div>
-        <div class="menu-item">WORK</div>
-        <div class="menu-item">SKILLS</div>
-        <div class="menu-item">CONTACT</div>
-    </nav-->
 
     <!-----LOGO----->
-    <a href="../index.html" id="logo">RC<sup>3</sup></a>
+    <a href="../index.html" id="logo">RC3</a>
 
     <!-----MENU----->
-    <div id="menu-btn" onclick="toggleMenu()"></div>
+    <div id="menu-btn" onclick="toggleMenu()"><svg xmlns="http://www.w3.org/2000/svg" width="29" height="90"
+            viewBox="0 0 29 90" fill="none">
+            <line x1="0.5" y1="90" x2="0.5" y2="-4.52995e-06" stroke="white" />
+            <line x1="28.5" y1="90" x2="28.5" y2="-4.52995e-06" stroke="white" />
+            <line x1="14.5" y1="90" x2="14.5" y2="-4.52995e-06" stroke="white" />
+        </svg></div>
 
     <!-----MASK: used to hide the content that passes outside the frame----->
     <div id="mask">
@@ -32,22 +28,22 @@
 
     <!-----FRAME----->
     <div id="frame-wrapper">
-        <!-----THEME BUTTONS----->
-        <div id="theme-container">
-            <div class="theme-wrapper">
-                <div class="theme-text">
-                    LIGHT
-                </div>
-                <div class="theme-button" id="light-mode">
-                </div>
-            </div>
-            <div class="theme-wrapper">
-                <div class="theme-text">
-                    DARK
-                </div>
-                <div class="theme-button" id="dark-mode">
+    </div>
 
-                </div>
+    <!-----THEME BUTTONS----->
+    <div id="theme-container">
+        <div class="theme-wrapper" id="light-mode" onclick="lightMode()">
+            <div class="theme-text">
+                LIGHT
+            </div>
+            <div class="theme-btn" id="light-btn">
+            </div>
+        </div>
+        <div class="theme-wrapper" id="dark-mode" onclick="darkMode()">
+            <div class="theme-text">
+                DARK
+            </div>
+            <div class="theme-btn" id="dark-btn">
             </div>
         </div>
     </div>
@@ -77,12 +73,9 @@
             </div>
             <div class="skills-list">
                 <div class="skills-list-wrapper">
-                    <div class="skills-text-wrapper">
-                        <div class="skill-text">Building responsive and visually appealing websites that provide an
-                            optimal
-                            user experience across devices.</div>
-                        <div class="skill-box"></div>
-                    </div>
+                    <div class="skill-text">Building responsive and visually appealing websites that provide an
+                        optimal
+                        user experience across devices.</div>
                 </div>
                 <div class="skills-list-wrapper">
                     <div class="skill-item">HTML</div>
@@ -110,11 +103,8 @@
             </div>
             <div class="skills-list">
                 <div class="skills-list-wrapper">
-                    <div class="skills-text-wrapper">
-                        <div class="skill-text">Empathizing with users' needs and preferences and turning those insights
-                            into intuitive and accessible design solutions.
-                        </div>
-                        <div class="skill-box"></div>
+                    <div class="skill-text">Empathizing with users' needs and preferences and turning those insights
+                        into intuitive and accessible design solutions.
                     </div>
                 </div>
                 <div class="skills-list-wrapper">
@@ -149,12 +139,9 @@
             </div>
             <div class="skills-list">
                 <div class="skills-list-wrapper">
-                    <div class="skills-text-wrapper">
-                        <div class="skill-text">Coding generative, interactive and visually engaging art, animations,
-                            and
-                            simulations.</div>
-                        <div class="skill-box"></div>
-                    </div>
+                    <div class="skill-text">Coding generative, interactive and visually engaging art, animations,
+                        and
+                        simulations.</div>
                 </div>
                 <div class="skills-list-wrapper">
                     <div class="skill-item">P5.JS</div>
@@ -167,7 +154,7 @@
         </section>
         <!-----EDUCATION----->
         <section id="education-section">
-            <div class="edu-heading-container">
+            <div>
                 <div id="edu-heading">EDUCATION</div>
             </div>
             <div id="edu-details-rows">
@@ -211,26 +198,68 @@
         </section>
         <!-----CERTIFCATION----->
         <section id="certifcates-section">
-            <div id="cert-heading-container">
-                <div id="cert-icons">image here</div>
-                <div class="l-skill-heading">CERTIFICATIONS</div>
+            <div>
+                <div id="cert-heading">CERTIFICATIONS</div>
             </div>
             <div>
-                <div class="cert-flow">
+                <div id="cert-flow">
                     <img class="cert-item item1" src="images/certificate-1.jpg" alt="HTML Certificate">
                     <img class="cert-item item2" src="images/certificate-2.jpg" alt="CSS Certificate">
                     <img class="cert-item item3" src="images/certificate-3.jpg" alt="Javascript Certificate">
-                    <img class="cert-item item4" src="images/certificate-4.jpg" alt="Pyhon Certificate">
+                    <img class="cert-item item4" src="images/certificate-4.jpg" alt="Python Certificate">
                 </div>
             </div>
         </section>
     </main>
+
     <footer id="skill-footer">
-        <div id="credits">RAPHAEL CABIGAS<sup> &copy;</sup></div>
-        <div>Curious to see what I've developed so far?</div>
-        <div id="back-to-top"><a href="#">TOP</a></div>
+        <div id="credits">
+            <div class="footer-heading">
+                RAPHAEL
+            </div>
+            <div class="footer-heading">
+                &copy;ABIGAS
+            </div>
+        </div>
+        <div id="b-footer-nav">
+            <div id="footer-text">Curious to see what I've developed so far?</div>
+            <a href="/works/works.html" id="big-footer-link"><span>WORKS</span><span>WORKS</span></a>
+        </div>
+        <div id="s-footer">
+            <div class="s-footer-container">
+                <div class="s-footer-heading">NAVIGATION</div>
+                <div class="s-footer-nav">
+                    <div class="s-nav-item">
+                        <a href="index.html">Home</a>
+                    </div>
+                    <div class="s-nav-item">
+                        <a href="/about/about.html">About</a>
+                    </div>
+                    <div class="s-nav-item">
+                        <a href="/contact/contact.html">Contact</a>
+                    </div>
+                </div>
+            </div>
+            <div class="s-footer-container">
+                <div class="s-footer-heading">SOCIALS</div>
+                <div class="s-footer-nav">
+                    <div class="s-nav-item">
+                        <a href="#">LinkedIn</a>
+                    </div>
+                    <div class="s-nav-item">
+                        <a href="#">Github</a>
+                    </div>
+                    <div class="s-nav-item">
+                        <a href="#">Instagram</a>
+                    </div>
+                    <div class="s-nav-item">
+                        <a href="#">Youtube</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </footer>
 </body>
-<script src="Main CSS and JS/globalscript.js"></script>
+<script src="/Main CSS and JS/script.js"></script>
 
 </html>
