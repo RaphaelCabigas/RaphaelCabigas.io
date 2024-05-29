@@ -6,38 +6,172 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Raphael Cabigas Works</title>
     <link rel="stylesheet" href="works.css">
-    <link rel="stylesheet" href="/Main CSS and JS/globalstyle.css">
+    <link rel="stylesheet" href="/Main CSS and JS/style.css">
 </head>
 
 <body>
+    <!-----LOGO----->
+    <a href="../index.html" id="logo">RC3</a>
+
+    <!-----MENU----->
+    <div id="menu-btn" onclick="toggleMenu()"><svg xmlns="http://www.w3.org/2000/svg" width="29" height="90"
+            viewBox="0 0 29 90" fill="none">
+            <line x1="0.5" y1="90" x2="0.5" y2="-4.52995e-06" stroke="white" />
+            <line x1="28.5" y1="90" x2="28.5" y2="-4.52995e-06" stroke="white" />
+            <line x1="14.5" y1="90" x2="14.5" y2="-4.52995e-06" stroke="white" />
+        </svg></div>
+
     <!-----MASK: used to hide the content that passes outside the frame----->
     <div id="mask">
     </div>
 
-    <!-----BORDER----->
+    <!-----FRAME----->
     <div id="frame-wrapper">
-        <div id="theme-container">
-            <div class="theme-wrapper">
-                <div class="theme-text">
-                    LIGHT
-                </div>
-                <div class="theme-button" id="light-mode">
-                </div>
-            </div>
-            <div class="theme-wrapper">
-                <div class="theme-text">
-                    DARK
-                </div>
-                <div class="theme-button" id="dark-mode">
+    </div>
 
-                </div>
+    <!-----THEME BUTTONS----->
+    <div id="theme-container">
+        <div class="theme-wrapper" id="light-mode" onclick="lightMode()">
+            <div class="theme-text">
+                LIGHT
+            </div>
+            <div class="theme-btn" id="light-btn">
+            </div>
+        </div>
+        <div class="theme-wrapper" id="dark-mode" onclick="darkMode()">
+            <div class="theme-text">
+                DARK
+            </div>
+            <div class="theme-btn" id="dark-btn">
             </div>
         </div>
     </div>
-    <section>
 
-    </section>
+    <!-----WORKS----->
+    <main>
+        <section id="works-hero">
+            <div class="works-heading">HIGHLIGHTED WORKS
+                <div class="works-hero-text">A showcase of my best work in varitety of fields including Web
+                    Development and Design,UX Design, and Creative Coding</div>
+            </div>
+            <div id="scroll-wrapper">
+                <div id="scroll-text">SCROLL FOR MORE</div>
+                <div class="scroll-arrow"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                        fill="currentColor">
+                        <path
+                            d="M13.0001 16.1716L18.3641 10.8076L19.7783 12.2218L12.0001 20L4.22192 12.2218L5.63614 10.8076L11.0001 16.1716V4H13.0001V16.1716Z">
+                        </path>
+                    </svg></div>
+            </div>
+        </section>
+        <section>
+            <div>
+                <div id="webdev-images">image</div>
+                <div>
+                    WEB DEVELOPMENT
+                </div>
+            </div>
+            <div>
+                <div class="webdev">Chef Green</div>
+                <div class="webdev">Frieren Beyond Journey's End</div>
+                <div class="webdev">SoundBoard</div>
+            </div>
+            <div>
+                <div>See more of my Web Development works at:</div>
+                <a href="http://">Github</a>
+            </div>
+        </section>
+        <section>
+            <div>
+                <div class="webdev">Bath Spa University</div>
+                <div class="webdev">Tasikaso</div>
+            </div>
+            <div>
+                <div id="webdev-images">image</div>
+                <div>
+                    UX DESIGN
+                </div>
+            </div>
+        </section>
+        <section>
+            <div>
+                <div id="webdev-images">image</div>
+                <div>
+                    CREATIVE CODING
+                </div>
+            </div>
+            <div>
+                <div class="webdev">Plato's Drive Thru</div>
+                <div class="webdev">Codename: Orange</div>
+                <div class="webdev">Audio Visualization</div>
+            </div>
+            <div>
+                <div>See more of my Creative Coding works at:</div>
+                <a href="http://">Itch.io</a>
+                <a href="http://">p5.js</a>
+            </div>
+        </section>
+        <section id="music-section">
+            <div id="music-container">
+                <div id="music-heading">
+                    I ALSO DO A BIT OF MUSIC
+                </div>
+                <div id="music-content">
+                    <div id="music-paragraph">
+                        short text
+                    </div>
+                    <div id="music">
+                        <div id="music-btn-wrapper">
+                            <button id="music-button">
+                            </button>
+                        </div>
+                        <div id="soundcloud-container">
+                            <div>
+                                See more at:
+                            </div>
+                            <div id="soundcloud-link">
+                                icon
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div id="credits">
+            <div>
+                RAPHAEL
+            </div>
+            <div>
+                &copy;ABIGAS
+            </div>
+        </div>
+        <div id="big-nav">
+            <div>
+                Ready to make things happen?
+            </div>
+            <div>
+                <a href="/contact/contact.html">CONTACT</a>
+            </div>
+            <div>
+                <div id="small-nav">
+                    <div id="small-nav-wrapper">
+                        <div class="small-nav-item">
+                            <a href="index.html">HOME</a>
+                        </div>
+                        <div class="small-nav-item">
+                            <a href="/skills/skills.html">SKILLS</a>
+                        </div>
+                        <div class="small-nav-item">
+                            <a href="/about/about.html">About</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
-<script src="/Main CSS and JS/globalscript.js"></script>
+<script src="/Main CSS and JS/script.js"></script>
 
 </html>
