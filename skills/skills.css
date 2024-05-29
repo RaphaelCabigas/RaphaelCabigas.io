@@ -36,6 +36,10 @@ section {
     scroll-snap-align: start;
 }
 
+footer {
+    scroll-snap-align: end;
+}
+
 body,
 html {
     scroll-snap-points-y: repeat(100vh);
@@ -90,22 +94,9 @@ html {
     padding: 20px;
 }
 
-.skills-text-wrapper {
-    display: grid;
-    place-items: center;
-    grid-template-columns: 1fr 1fr;
-}
-
 .skill-text {
     font-size: 30px;
     line-height: 35px;
-}
-
-.skill-box {
-    display: block;
-    width: 100%;
-    height: 100%;
-    background-color: white;
 }
 
 /*----------EDUCATION SECTION--------*/
@@ -152,85 +143,75 @@ html {
 /*----------CERTIFICATES SECTION--------*/
 
 #certifcates-section {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0;
 }
 
-#cert-heading-container {
-    display: grid;
-    grid-template-rows: 60vh 10vh;
-}
-
-#cert-icons {
-    width: 100%;
-    height: 100%;
-    background-color: black;
+#cert-heading {
+    text-align: right;
+    font-size: 120px;
 }
 
 /*----------CERTIFICATE CAROUSEL--------*/
 /*----------CERTIFICATE CAROUSEL--------*/
 
-.cert-flow {
+#cert-flow {
     width: 100%;
-    height: 70vh;
-    margin: auto 0;
+    height: 50vh;
+    margin-inline: auto;
     position: relative;
     overflow: hidden;
-    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0));
+    mask-image: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0));
 }
 
-.cert-flow:hover .cert-item {
+#cert-flow:hover .cert-item {
     animation-play-state: paused;
 }
 
-.cert-flow:hover>.cert-item {
+#cert-flow:hover>.cert-item {
     opacity: 0.4;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.4s ease;
 }
 
-.cert-flow>.cert-item:hover {
+#cert-flow>.cert-item:hover {
     opacity: 1;
-}
-
-@keyframes scrollTop {
-    to {
-        top: -500px;
-    }
 }
 
 .cert-item {
     transition: 0.3s ease;
-    /* Smooth transition effect */
-    width: inherit;
+    width: 850px;
     height: inherit;
     object-fit: contain;
     position: absolute;
-    bottom: calc(600px * 8);
     animation-timing-function: linear;
     animation-duration: 10s;
     animation-iteration-count: infinite;
+    left: max(calc(850px * 2), 100%);
+    animation-name: scrollLeft;
 }
 
-.cert-item {
-    top: max(calc(600px * 1.5), 100%);
-    animation-name: scrollTop;
+@keyframes scrollLeft {
+    to {
+        left: -850px;
+    }
 }
 
 .item1 {
-    animation-delay: calc(20s / 3 * (4 - 1) * -1);
+    animation-delay: calc(10s / 4 * (4 - 1) * -1);
 }
 
 .item2 {
-    animation-delay: calc(20s / 3 * (4 - 2) * -1);
+    animation-delay: calc(10s / 4 * (4 - 2) * -1);
 }
 
 .item3 {
-    animation-delay: calc(20s / 3 * (4 - 3) * -1);
+    animation-delay: calc(10s / 4 * (4 - 3) * -1);
 }
 
 .item4 {
-    animation-delay: calc(20s / 4 * (4 - 4) * -1);
+    animation-delay: calc(10s / 4 * (4 - 4) * -1);
 }
 
 /*--------FOOTER-------*/
@@ -245,6 +226,84 @@ html {
     position: relative;
 }
 
+#credits {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    letter-spacing: -3px;
+}
+
+.footer-heading {
+    font-size: 50px;
+}
+
+/*--------BIG NAV-------*/
+/*--------BIG NAV-------*/
+
+#b-footer-nav {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+#footer-text {
+    font-family: Mont-EL;
+    text-wrap: balance;
+    font-size: 40px;
+}
+
+#big-footer-link {
+    font-size: 120px;
+    transition: 0.5s ease;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--white-clr);
+    display: flex;
+    flex-direction: column;
+}
+
+#big-footer-link:hover {
+    color: var(--accent-clr);
+}
+
+/*--------SMALL NAV-------*/
+/*--------SMALL NAV-------*/
+
+#s-footer {
+    display: grid;
+}
+
+.s-footer-container {
+    width: 100%;
+}
+
+.s-footer-heading {
+    font-size: 30px;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.s-footer-heading::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    top: 42px;
+    background-color: var(--accent-clr);
+}
+
+.s-footer-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+.s-nav-item {
+    font-family: Mont-EL;
+}
+
+
 #back-to-top {
     width: 50px;
     height: 50px;
@@ -252,11 +311,4 @@ html {
     justify-content: center;
     align-items: center;
     background-color: var(--white-clr);
-}
-
-#credits {
-    position: absolute;
-    letter-spacing: 1px;
-    left: 0;
-    bottom: 20;
 }
