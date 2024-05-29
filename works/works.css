@@ -1,0 +1,108 @@
+section {
+    height: 100vh;
+    width: 80vw;
+    margin-inline: auto;
+    gap: 130px;
+    scroll-snap-align: start;
+}
+
+body,
+html {
+    scroll-snap-points-y: repeat(100vh);
+    scroll-snap-type: y proximity;
+    scroll-behavior: smooth;
+}
+
+/*----------WORK SECTION--------*/
+/*----------WORK SECTION--------*/
+
+#works-hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.works-heading {
+    font-family: Mont-H;
+    font-size: 120px;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.works-hero-text {
+    font-family: Mont-EL;
+    font-size: 20px;
+    text-transform: none;
+    text-align: left;
+    position: absolute;
+}
+
+#scroll-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+#scroll-text {
+    font-family: Mont-EL;
+    letter-spacing: 5px;
+    font-weight: 900;
+}
+
+.scroll-arrow {
+    width: 20px;
+    height: 20px;
+    animation: arrowAnimation 1.5s infinite;
+}
+
+@keyframes arrowAnimation {
+    0% {
+        transform: translateY(3px);
+    }
+
+    25% {
+        transform: translateY(-3px);
+    }
+
+    50% {
+        transform: translateY(3px);
+    }
+
+    75% {
+        transform: translateY(-3px);
+    }
+
+    100% {
+        transform: translateY(3px);
+    }
+}
+
+/*----------MUSIC BUTTON WRAPPER--------*/
+/*----------MUSIC BUTTON WRAPPER--------*/
+
+#music-btn-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#music-button {
+    width: 200px;
+    height: 200px;
+    background: conic-gradient(white, #9e9e9e, rgb(67, 67, 67), black);
+    border-radius: 50%;
+    animation: SpinDisc 3s linear infinite;
+    border: none;
+    position: relative;
+}
+
+@keyframes SpinDisc {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
