@@ -1,33 +1,3 @@
-.intro-downward {
-    display: flex;
-    justify-content: center;
-    font-family: Mont-H;
-    align-items: center;
-    font-size: 100px;
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
-    background-image: url(grain.svg);
-    background-color: var(--white-clr);
-    z-index: 1000;
-    animation: intro-animation 1.5s ease forwards;
-}
-
-.intro-text {
-    color: var(--bg-clr);
-}
-
-@keyframes intro-animation {
-    0% {
-        transform: translateY(0%);
-    }
-
-    100% {
-        transform: translateY(100%);
-    }
-
-}
-
 section {
     height: 100vh;
     width: 80vw;
@@ -95,8 +65,10 @@ html {
 }
 
 .skill-text {
+    font-family: Mont-EL;
     font-size: 30px;
-    line-height: 35px;
+    letter-spacing: 1px;
+    line-height: 50px;
 }
 
 /*----------EDUCATION SECTION--------*/
@@ -223,7 +195,6 @@ html {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     place-items: center;
-    position: relative;
 }
 
 #credits {
@@ -243,10 +214,11 @@ html {
 
 #b-footer-nav {
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    place-items: center;
 }
 
 #footer-text {
+    margin-inline: 30px;
     font-family: Mont-EL;
     text-wrap: balance;
     font-size: 40px;
@@ -261,6 +233,10 @@ html {
     flex-direction: column;
 }
 
+#big-footer-link span+span {
+    margin-top: -10px;
+}
+
 #big-footer-link:hover {
     color: var(--accent-clr);
 }
@@ -270,10 +246,8 @@ html {
 
 #s-footer {
     display: grid;
-}
-
-.s-footer-container {
-    width: 100%;
+    grid-template-rows: 1fr 1fr;
+    gap: 60px;
 }
 
 .s-footer-heading {
@@ -299,16 +273,7 @@ html {
     gap: 20px;
 }
 
-.s-nav-item {
+.s-footer-nav div a {
     font-family: Mont-EL;
-}
-
-
-#back-to-top {
-    width: 50px;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--white-clr);
+    font-weight: 500;
 }

@@ -1,0 +1,48 @@
+main {
+    height: 100vh;
+    width: 80vw;
+    margin-inline: auto;
+    gap: 130px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+#heading {
+    font-size: 110px;
+    text-wrap: nowrap;
+}
+
+#img-container {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+}
+
+#text {
+    font-family: Mont-EL;
+    text-align: justify;
+    line-height: 29px;
+    font-weight: 500;
+    letter-spacing: 0.8px;
+}
+
+#resume-btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 20px;
+    border: 1px solid var(--white-clr);
+    transition: 1s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+#resume-btn:hover {
+    color: var(--navyblue-clr);
+    background-color: var(--accent-clr);
+    border: 1px solid var(--navyblue-clr);
+}

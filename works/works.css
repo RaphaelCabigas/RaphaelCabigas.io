@@ -2,8 +2,10 @@ section {
     height: 100vh;
     width: 80vw;
     margin-inline: auto;
-    gap: 130px;
     scroll-snap-align: start;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 body,
@@ -13,6 +15,10 @@ html {
     scroll-behavior: smooth;
 }
 
+footer {
+    scroll-snap-align: end;
+}
+
 /*----------WORK SECTION--------*/
 /*----------WORK SECTION--------*/
 
@@ -20,6 +26,7 @@ html {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    gap: 130px;
 }
 
 .works-heading {
@@ -78,8 +85,136 @@ html {
     }
 }
 
-/*----------MUSIC BUTTON WRAPPER--------*/
-/*----------MUSIC BUTTON WRAPPER--------*/
+/*---------SUBWORK SECTIONS--------*/
+/*----------SUBWORK SECTIONS--------*/
+
+.work-details {
+    display: flex;
+    writing-mode: vertical-lr;
+    flex-direction: column-reverse;
+    gap: 20px;
+}
+
+.work-category {
+    text-orientation: upright;
+    color: transparent;
+    -webkit-text-stroke: 0.8px var(--white-clr);
+    font-size: 20px;
+}
+
+#webdev-images {
+    background-color: black;
+    width: 35vw;
+    height: 75vh;
+}
+
+.right-container {
+    display: grid;
+    grid-template-rows: 4fr 1fr;
+    gap: 30px;
+}
+
+.right-items {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    font-size: 40px;
+    text-align: right;
+}
+
+.work-links {
+    text-align: right;
+}
+
+.work-links div a {
+    display: flex;
+}
+
+/*----------IMAGES DIV--------*/
+/*----------IMAGES DIV--------*/
+
+#webdev-container {
+    background-color: black;
+}
+
+#wd-image {
+    background-color: red;
+}
+
+#webdev-container {
+    background-color: black;
+}
+
+#wd-image {
+    background-color: red;
+}
+
+#webdev-container {
+    background-color: black;
+}
+
+#wd-image {
+    background-color: red;
+}
+
+
+/*----------SUBWORK REVERSED SECTION--------*/
+/*----------SUBWORK REVERSED SECTION--------*/
+
+#right-details {
+    flex-direction: column;
+}
+
+#bathspa {
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+#bathspa div {
+    font-size: 40px;
+    margin-top: 10px;
+
+}
+
+#left-items {
+    text-align: left;
+}
+
+/*----------MUSIC SECTION--------*/
+/*----------MUSIC SECTION--------*/
+
+
+#music-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-wrap: nowrap;
+}
+
+#big-heading {
+    letter-spacing: 50px;
+    font-size: 160px;
+    text-align: center;
+}
+
+#small-heading {
+    display: flex;
+    flex-direction: column;
+    font-size: 130px;
+}
+
+#music-content {
+    display: flex;
+}
+
+/*----------MUSIC BUTTON CONTAINER--------*/
+/*----------MUSIC BUTTON CONTAINER--------*/
+
+#music-btn-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
 
 #music-btn-wrapper {
     display: flex;
@@ -87,9 +222,9 @@ html {
     align-items: center;
 }
 
-#music-button {
-    width: 200px;
-    height: 200px;
+#music-btn {
+    width: 300px;
+    height: 300px;
     background: conic-gradient(white, #9e9e9e, rgb(67, 67, 67), black);
     border-radius: 50%;
     animation: SpinDisc 3s linear infinite;
@@ -105,4 +240,91 @@ html {
     100% {
         transform: rotate(360deg);
     }
+}
+
+
+/*--------FOOTER-------*/
+/*--------FOOTER-------*/
+
+#skill-footer {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    place-items: center;
+}
+
+#credits {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    letter-spacing: -3px;
+}
+
+.footer-heading {
+    font-size: 50px;
+}
+
+/*--------BIG NAV-------*/
+/*--------BIG NAV-------*/
+
+#footer-text {
+    font-family: Mont-EL;
+    text-wrap: nowrap;
+    font-size: 40px;
+}
+
+#big-footer-link {
+    font-size: 120px;
+    transition: 0.5s ease;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--white-clr);
+    display: flex;
+    flex-direction: column;
+}
+
+#big-footer-link span+span {
+    margin-top: -10px;
+}
+
+#big-footer-link:hover {
+    color: var(--accent-clr);
+}
+
+/*--------SMALL NAV-------*/
+/*--------SMALL NAV-------*/
+
+#s-footer {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 60px;
+}
+
+.s-footer-heading {
+    font-size: 30px;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.s-footer-heading::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    top: 42px;
+    background-color: var(--accent-clr);
+}
+
+.s-footer-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+.s-footer-nav div a {
+    font-family: Mont-EL;
+    font-weight: 500;
 }

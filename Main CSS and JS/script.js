@@ -1,18 +1,18 @@
 //-----TOGGLE MENU VISIBILITY-----//
 //-----TOGGLE MENU VISIBILITY-----//
 
+const menuList = document.getElementById("menu-container");
+const menuBtn = document.getElementById("menu-btn");
+
 function toggleMenu() {
-    var menuList = document.getElementById("menu-container");
-    var hamburgerBtn = document.getElementById("menu-btn");
-    var overflowX = document.querySelector("body");
-    if (menuList.style.display === "none") {
+    if (menuList.style.display === "none" || menuList.style.display === "") {
         menuList.style.display = "flex";
-        hamburgerBtn.style.zIndex = "5";
-        overflowX.style.overflow = "hidden";
     } else {
         menuList.style.display = "none";
     }
 }
+
+menuBtn.addEventListener("click", toggleMenu);
 
 //-----DARK MODE & LIGHT MODE-----//
 //-----DARK MODE & LIGHT MODE-----//

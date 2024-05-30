@@ -9,12 +9,12 @@
     background-image: url(grain.svg);
     background-color: var(--white-clr);
     z-index: 1000;
-    animation: intro-animation 3s 1s ease forwards;
+    animation: intro-animation 2s 0.5s ease forwards;
 }
 
 .intro-text {
     fill: var(--navyblue-clr);
-    animation: FadeIn 1s ease forwards;
+    animation: FadeIn 0.5s ease forwards;
 }
 
 @keyframes FadeIn {

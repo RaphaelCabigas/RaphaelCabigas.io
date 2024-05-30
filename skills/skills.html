@@ -15,12 +15,38 @@
     <a href="../index.html" id="logo">RC3</a>
 
     <!-----MENU----->
-    <div id="menu-btn" onclick="toggleMenu()"><svg xmlns="http://www.w3.org/2000/svg" width="29" height="90"
-            viewBox="0 0 29 90" fill="none">
+    <div id="menu-btn"><svg xmlns="http://www.w3.org/2000/svg" width="29" height="90" viewBox="0 0 29 90" fill="none">
             <line x1="0.5" y1="90" x2="0.5" y2="-4.52995e-06" stroke="white" />
             <line x1="28.5" y1="90" x2="28.5" y2="-4.52995e-06" stroke="white" />
             <line x1="14.5" y1="90" x2="14.5" y2="-4.52995e-06" stroke="white" />
         </svg></div>
+
+    <div id="menu-container">
+        <div id="menu-lists">
+            <div id="menu-wrapper">
+                <div class="menu-item">
+                    <a href="/index.html">HOME</a>
+                </div>
+                <div class="menu-item">
+                    <a href="/about/about.html">ABOUT</a>
+                </div>
+                <div class="menu-item">
+                    <a href="/skills/skills.html">SKILLS</a>
+                </div>
+                <div class="menu-item">
+                    <a href="/works/works.html">WORKS</a>
+                </div>
+                <div class="menu-item">
+                    <a href="/contact/contact.html">CONTACT</a>
+                </div>
+            </div>
+        </div>
+        <div id="pic-wrapper"></div>
+        <div><svg width="31" height="92" viewBox="0 0 31 92" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M30 91L1.5 1" stroke="white" />
+                <path d="M0.999997 91L29.5 1" stroke="white" />
+            </svg></div>
+    </div>
 
     <!-----MASK: used to hide the content that passes outside the frame----->
     <div id="mask">
@@ -218,7 +244,7 @@
                 RAPHAEL
             </div>
             <div class="footer-heading">
-                &copy;ABIGAS
+                <span>&copy;</span>ABIGAS
             </div>
         </div>
         <div id="b-footer-nav">
@@ -229,13 +255,16 @@
             <div class="s-footer-container">
                 <div class="s-footer-heading">NAVIGATION</div>
                 <div class="s-footer-nav">
-                    <div class="s-nav-item">
+                    <div>
                         <a href="index.html">Home</a>
                     </div>
-                    <div class="s-nav-item">
+                    <div>
                         <a href="/about/about.html">About</a>
                     </div>
-                    <div class="s-nav-item">
+                    <div>
+                        <a href="/contact/contact.html">Skills</a>
+                    </div>
+                    <div>
                         <a href="/contact/contact.html">Contact</a>
                     </div>
                 </div>
@@ -243,16 +272,16 @@
             <div class="s-footer-container">
                 <div class="s-footer-heading">SOCIALS</div>
                 <div class="s-footer-nav">
-                    <div class="s-nav-item">
+                    <div>
                         <a href="#">LinkedIn</a>
                     </div>
-                    <div class="s-nav-item">
+                    <div>
                         <a href="#">Github</a>
                     </div>
-                    <div class="s-nav-item">
+                    <div>
                         <a href="#">Instagram</a>
                     </div>
-                    <div class="s-nav-item">
+                    <div>
                         <a href="#">Youtube</a>
                     </div>
                 </div>
