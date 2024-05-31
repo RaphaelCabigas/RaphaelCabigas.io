@@ -8,16 +8,18 @@
     src: url('fonts/Mont-HeavyDEMO.otf');
 }
 
-/*--------COLORS USED THROUGH OUT THE WHOLE PAGES---------*/
-/*--------COLORS USED THROUGH OUT THE WHOLE PAGES---------*/
+/*--------COLORS THEMES---------*/
+/*--------COLORS THEMES---------*/
 
-:root {
+.dark-mode {
     --white-clr: #cac9c9;
     --navyblue-clr: #222831;
     --accent-clr: #C1A57B;
     --mask-clr: #0f1115fe;
     --darkmd-clr: #cac9c9;
+    --cursor-clr: #cac9c9;
     --whitemd-clr: transparent;
+    --grain-percentage: 23%;
 }
 
 .light-mode {
@@ -26,7 +28,9 @@
     --accent-clr: #897558;
     --mask-clr: #858383;
     --darkmd-clr: transparent;
+    --cursor-clr: #222831;
     --whitemd-clr: #222831;
+    --grain-percentage: 45%;
 }
 
 /*--------SCROLLBAR STYLING---------*/
@@ -59,7 +63,7 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: Mont-H, Arial, Helvetica, sans-serif;
+    font-family: Mont-H;
 }
 
 *,
@@ -72,7 +76,6 @@ body {
     width: 100vw;
     height: 100vh;
     color: var(--white-clr);
-    background-image: url(grain.svg);
     background-color: var(--navyblue-clr);
     overflow-x: hidden;
     position: relative;
@@ -87,8 +90,18 @@ a {
     color: var(--white-clr);
 }
 
-a:hover {
-    cursor: pointer;
+/*--------GRAIN FILTER--------*/
+/*--------GRAIN FILTER--------*/
+
+body::before {
+    position: fixed;
+    content: "";
+    width: 100%;
+    height: 100%;
+    z-index: 10000000;
+    pointer-events: none;
+    opacity: var(--grain-percentage);
+    filter: url(#grainy);
 }
 
 /*----------SVG STYLES--------*/
@@ -135,8 +148,8 @@ path {
     letter-spacing: 5px;
     position: fixed;
     z-index: 1;
-    left: -10.7vh;
-    bottom: 20vh;
+    left: -79.6px;
+    bottom: 160px;
     transform: rotate(-90deg);
     display: flex;
     align-items: center;
@@ -176,16 +189,14 @@ path {
 /*----------MENU--------*/
 
 #menu-container {
-    position: fixed;
-    display: none;
+    display: flex;
     justify-content: space-evenly;
     align-items: center;
     width: 100vw;
     height: 100vh;
-    animation: menuAnimationIn 1s ease forwards;
-    background-image: url(grain.svg);
     background-color: var(--navyblue-clr);
     z-index: 5;
+    position: fixed;
 }
 
 @keyframes menuAnimationIn {
@@ -198,14 +209,55 @@ path {
     }
 }
 
+@keyframes menuAnimationOut {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}
+
 .menu-item>a {
     font-size: 100px;
 }
 
-#pic-wrapper {
-    width: 50%;
-    height: 100%;
-    background-color: var(--white-clr);
+#menu-wrapper {
+    text-align: right;
+}
+
+/*----------CLOSE BUTTON--------*/
+/*----------CLOSE BUTTON--------*/
+
+#close-btn {
+    position: absolute;
+    top: 70px;
+    cursor: pointer;
+}
+
+
+#close-btn::after {
+    content: "CLOSE";
+    display: block;
+    position: absolute;
+    font-weight: 800;
+    font-size: 25px;
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    top: 0px;
+    right: -2px;
+    width: 0;
+    height: 170px;
+    opacity: 0;
+    color: #222831;
+    background-color: var(--accent-clr);
+    transition: .5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+#close-btn:hover::after {
+    width: 120%;
+    opacity: 1;
 }
 
 /*----------LOGO WRAPPER--------*/
@@ -231,7 +283,6 @@ path {
     width: 0;
     height: 140px;
     opacity: 0;
-    visibility: hidden;
     color: #222831;
     background-color: var(--accent-clr);
     transition: .5s cubic-bezier(0.19, 1, 0.22, 1);
@@ -240,20 +291,19 @@ path {
 #logo:hover::after {
     width: 100%;
     opacity: 1;
-    visibility: visible;
 }
-
 
 /*----------MENU BUTTON--------*/
 /*----------MENU BUTTON--------*/
 
 #menu-btn {
     position: fixed;
-    display: flex;
     right: 9px;
     top: 50px;
     z-index: 3;
     cursor: pointer;
+    writing-mode: vertical-lr;
+    text-orientation: upright;
 }
 
 
@@ -263,13 +313,10 @@ path {
     position: absolute;
     font-weight: 800;
     font-size: 25px;
-    writing-mode: vertical-lr;
-    text-orientation: upright;
     right: -2px;
     width: 0;
     height: 135px;
     opacity: 0;
-    visibility: hidden;
     color: #222831;
     background-color: var(--accent-clr);
     transition: .5s cubic-bezier(0.19, 1, 0.22, 1);
@@ -278,7 +325,6 @@ path {
 #menu-btn:hover::after {
     width: 120%;
     opacity: 1;
-    visibility: visible;
 }
 
 /*-----CURSOR DESIGN-----*/
@@ -289,10 +335,11 @@ path {
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    background: var(--accent-clr);
     transform: translate(-50%, -50%);
     transition: 0.1s;
     pointer-events: none;
     mix-blend-mode: difference;
     z-index: 9999;
+    transition: 0.1s ease;
+    border: 3px solid #cac9c9;
 }
