@@ -23,13 +23,28 @@ const waveHeading = (heading, className) => {
 waveHeading("#heading-1st", "letter-head1");
 waveHeading("#heading-2nd", "letter-head2");
 
-// HEADING 1 ANIMATION
+
+//-----GSAP ANIMATIONS-----//
+//-----GSAP ANIMATIONS-----//
+
+// 1st heading 
 gsap.set(".letter-head1", { display: "inline-block" });
 gsap.fromTo(".letter-head1", { y: 150 }, { y: 0, delay: 1, duration: 1.2, ease: "back.out(3)", stagger: 0.05 });
 
-// HEADING 2 ANIMATION
+// 2nd heading
 gsap.set(".letter-head2", { display: "inline-block" });
 gsap.fromTo(".letter-head2", { y: 150 }, { y: 0, delay: 1.2, duration: 1.2, ease: "back.out(3)", stagger: -0.05 });
 
-// CONTACT TEXT ANIMATION
+// CONTACT TEXT
 gsap.fromTo('#contact-txt', { y: 100 }, { y: 0, delay: 0.5, duration: 1, ease: 'ease' });
+
+// EXPERTISE TEXT
+gsap.fromTo("#expertise>div", { x: -200 }, { x: 0, delay: 0.5, duration: 1, ease: 'ease', stagger: -0.6, });
+
+/*TEXT CAROUSEL used for future
+var carousel = gsap.to(".text-carousel",
+    {
+        xPercent: -100, repeat: -1, duration: 10,
+        ease: "linear"
+    }).totalProgress(0.5); */
+

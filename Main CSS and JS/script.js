@@ -28,11 +28,15 @@ menuList.style.display = "none";
 function openMenu() {
     menuList.style.display = "flex";
     menuList.style.animation = "menuAnimationIn 1s ease forwards";
+    gsap.fromTo(".menu-item>a", { y: 1700 }, { y: 0, duration: 0.4, stagger: 0.05 });
+
 }
 
 // Close function
 function closeMenu() {
+    gsap.fromTo(".menu-item>a", { y: 0 }, { y: 1000, stagger: 0.05 });
     menuList.style.animation = "menuAnimationOut 1s ease forwards";
+
 }
 
 menuBtn.addEventListener("click", openMenu);
