@@ -1,4 +1,21 @@
-main {
+section {
+    scroll-snap-align: start;
+}
+
+body,
+html {
+    scroll-snap-type: y proximity;
+    scroll-behavior: smooth;
+}
+
+footer {
+    scroll-snap-align: end;
+}
+
+/*--------ABOUT SECTION--------*/
+/*--------ABOUT SECTION--------*/
+
+#about {
     height: 100vh;
     width: 80vw;
     margin-inline: auto;
@@ -7,6 +24,7 @@ main {
     grid-template-columns: 1fr 1fr;
     place-items: center;
 }
+
 
 #content {
     display: flex;
@@ -45,4 +63,172 @@ main {
     color: var(--navyblue-clr);
     background-color: var(--accent-clr);
     border: 1px solid var(--navyblue-clr);
+}
+
+/*----------EDUCATION SECTION--------*/
+/*----------EDUCATION SECTION--------*/
+
+#education-section {
+    height: 100vh;
+    width: 80vw;
+    margin-inline: auto;
+    gap: 130px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0;
+}
+
+#edu-heading {
+    font-size: 120px;
+}
+
+#edu-details-rows {
+    display: flex;
+    flex-direction: column;
+}
+
+.edu-details-container {
+    border: 1px dashed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.edu-wrapper {
+    width: 80%;
+    padding: 30px;
+}
+
+.country,
+.course {
+    text-align: right;
+}
+
+.school-name,
+.course {
+    font-size: 25px;
+}
+
+/*--------FOOTER-------*/
+/*--------FOOTER-------*/
+
+#skill-footer {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    place-items: center;
+}
+
+#credits {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    letter-spacing: -3px;
+}
+
+.footer-heading {
+    font-size: 50px;
+}
+
+/*--------BIG NAV-------*/
+/*--------BIG NAV-------*/
+
+#footer-text {
+    margin-inline: 50px;
+    font-family: Mont-EL;
+    text-wrap: balance;
+    font-size: 40px;
+}
+
+#big-footer-link {
+    font-size: 130px;
+    transition: 0.5s ease;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--white-clr);
+    line-height: 120px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+#big-footer-link>span {
+    position: relative;
+    letter-spacing: 13.5px;
+}
+
+#big-footer-link>span::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 10px;
+    bottom: 5px;
+    background-color: var(--white-clr);
+    transition: 1s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+#big-footer-link:hover>span::after {
+    width: 100%;
+}
+
+#big-footer-link:hover {
+    color: var(--accent-clr);
+}
+
+/*--------SMALL NAV-------*/
+/*--------SMALL NAV-------*/
+
+#s-footer {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+.s-footer-heading {
+    font-size: 30px;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.s-footer-heading::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    top: 42px;
+    background-color: var(--accent-clr);
+}
+
+.s-footer-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+.s-footer-nav a {
+    font-family: Mont-EL;
+    font-weight: 500;
+    position: relative;
+}
+
+.s-footer-nav>a::after {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 5px;
+    height: 5px;
+    right: 0;
+    top: 5px;
+    border-radius: 50%;
+    background-color: var(--white-clr);
+    transition: 0.3s ease;
+}
+
+.s-footer-nav>a:hover::after {
+    transform: scale(2.5);
+    background-color: var(--accent-clr);
 }
