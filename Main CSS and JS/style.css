@@ -219,8 +219,32 @@ path {
     }
 }
 
+.menu-item {
+    overflow: hidden;
+}
+
 .menu-item>a {
+    display: block;
     font-size: 100px;
+    position: relative;
+    transition: 1s;
+}
+
+.menu-item>a::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 5%;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-image: url(#grainy);
+    background-color: var(--navyblue-clr);
+    transition: 0.5s;
+}
+
+.menu-item:hover>a::after {
+    width: 100%;
 }
 
 #menu-wrapper {
