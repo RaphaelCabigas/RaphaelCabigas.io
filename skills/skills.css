@@ -12,104 +12,133 @@ footer {
 
 body,
 html {
-    scroll-snap-points-y: repeat(100vh);
     scroll-snap-type: y proximity;
     scroll-behavior: smooth;
 
 }
 
-.skills-section,
-.certifcates-section {
+.skills-section {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-/*----------SKILLS SECTION--------*/
-/*----------SKILLS SECTION--------*/
+/*----------SKILLS HERO--------*/
+/*----------SKILLS HERO--------*/
 
-.skill-heading-container {
+#skills-hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 130px;
+}
+
+.skills-heading {
+    font-family: Mont-H;
+    font-size: 120px;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.skills-hero-text {
+    font-family: Mont-EL;
+    font-size: 20px;
+    text-transform: none;
+    text-align: left;
+    position: absolute;
+}
+
+#scroll-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 100px;
+    gap: 10px;
 }
+
+#scroll-text {
+    font-family: Mont-EL;
+    letter-spacing: 5px;
+    font-weight: 900;
+}
+
+.scroll-arrow {
+    width: 20px;
+    height: 20px;
+    animation: arrowAnimation 1.5s infinite;
+}
+
+@keyframes arrowAnimation {
+    0% {
+        transform: translateY(3px);
+    }
+
+    25% {
+        transform: translateY(-3px);
+    }
+
+    50% {
+        transform: translateY(3px);
+    }
+
+    75% {
+        transform: translateY(-3px);
+    }
+
+    100% {
+        transform: translateY(3px);
+    }
+}
+
+/*----------SUBSKILLS SECTION--------*/
+/*----------SUBSKILLS SECTION--------*/
 
 .xl-skill-heading {
-    font-family: Mont-H;
     font-size: 120px;
     text-align: center;
     text-transform: uppercase;
+    writing-mode: vertical-lr;
+    text-orientation: upright;
 }
 
 .l-skill-heading {
-    font-family: Mont-H;
-    font-size: 35px;
-    text-transform: uppercase;
-    text-align: center;
+    font-size: 120px;
 }
 
-.skills-list-wrapper {
+#cc-heading {
+    font-size: 100px;
+}
+
+.skills-container {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.skills-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
 .skills-list {
-    display: grid;
-    grid-template-rows: 1fr 1fr;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .skill-item {
     font-size: 25px;
-    padding: 20px;
+    letter-spacing: 6px;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--white-clr);
 }
 
 .skill-text {
     font-family: Mont-EL;
     font-size: 30px;
-    letter-spacing: 1px;
-    line-height: 50px;
+    text-wrap: balance;
 }
 
-/*----------EDUCATION SECTION--------*/
-/*----------EDUCATION SECTION--------*/
-#education-section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 0;
-}
-
-#edu-heading {
-    font-size: 120px;
-}
-
-#edu-details-rows {
-    display: flex;
-    flex-direction: column;
-}
-
-.edu-details-container {
-    border: 1px dashed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.edu-wrapper {
-    width: 80%;
-    padding: 30px;
-}
-
-.country,
-.course {
-    text-align: right;
-}
-
-.school-name,
-.course {
-    font-size: 25px;
-}
 
 /*----------CERTIFICATES SECTION--------*/
 /*----------CERTIFICATES SECTION--------*/
@@ -225,16 +254,32 @@ html {
 }
 
 #big-footer-link {
-    font-size: 120px;
+    font-size: 130px;
     transition: 0.5s ease;
     color: transparent;
     -webkit-text-stroke: 1px var(--white-clr);
+    line-height: 120px;
     display: flex;
     flex-direction: column;
 }
 
-#big-footer-link span+span {
-    margin-top: -10px;
+#big-footer-link span {
+    position: relative;
+}
+
+#big-footer-link span::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 10px;
+    bottom: 5px;
+    background-color: var(--white-clr);
+    transition: 1s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+#big-footer-link:hover span::after {
+    width: 100%;
 }
 
 #big-footer-link:hover {
@@ -247,7 +292,6 @@ html {
 #s-footer {
     display: grid;
     grid-template-rows: 1fr 1fr;
-    gap: 60px;
 }
 
 .s-footer-heading {
@@ -273,7 +317,26 @@ html {
     gap: 20px;
 }
 
-.s-footer-nav div a {
+.s-footer-nav a {
     font-family: Mont-EL;
     font-weight: 500;
+    position: relative;
+}
+
+.s-footer-nav>a::after {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 5px;
+    height: 5px;
+    right: 0;
+    top: 5px;
+    border-radius: 50%;
+    background-color: var(--white-clr);
+    transition: 0.3s ease;
+}
+
+.s-footer-nav>a:hover::after {
+    transform: scale(2.5);
+    background-color: var(--accent-clr);
 }
