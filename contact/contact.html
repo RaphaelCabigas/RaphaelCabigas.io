@@ -21,30 +21,32 @@
         </svg></div>
 
     <div id="menu-container">
-        <div id="menu-lists">
-            <div id="menu-wrapper">
-                <div class="menu-item">
-                    <a href="/index.html">HOME</a>
-                </div>
-                <div class="menu-item">
-                    <a href="/about/about.html">ABOUT</a>
-                </div>
-                <div class="menu-item">
-                    <a href="/skills/skills.html">SKILLS</a>
-                </div>
-                <div class="menu-item">
-                    <a href="/works/works.html">WORKS</a>
-                </div>
-                <div class="menu-item">
-                    <a href="/contact/contact.html">CONTACT</a>
-                </div>
+        <div id="social-wrapper"></div>
+        <div id="menu-wrapper">
+            <div class="menu-item">
+                <a href="/index.html">HOME</a>
+            </div>
+            <div class="menu-item">
+                <a href="/about/about.html">ABOUT</a>
+            </div>
+            <div class="menu-item">
+                <a href="/skills/skills.html">SKILLS</a>
+            </div>
+            <div class="menu-item">
+                <a href="/works/works.html">WORKS</a>
+            </div>
+            <div class="menu-item">
+                <a href="/contact/contact.html">CONTACT</a>
             </div>
         </div>
-        <div id="pic-wrapper"></div>
-        <div><svg width="31" height="92" viewBox="0 0 31 92" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M30 91L1.5 1" stroke="white" />
-                <path d="M0.999997 91L29.5 1" stroke="white" />
-            </svg></div>
+        <div>
+            <div id="close-btn"><svg width="31" height="92" viewBox="0 0 31 92" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M30 91L1.5 1" stroke="white" />
+                    <path d="M0.999997 91L29.5 1" stroke="white" />
+                </svg></div>
+            <div></div>
+        </div>
     </div>
 
     <!-----MASK: used to hide the content that passes outside the frame----->
@@ -74,16 +76,7 @@
     </div>
 
     <main id="contact">
-        <div id="contact-texts">
-            <div id="contact-heading">LET'S MAKE YOUR PROJECT A REALITY.</div>
-            <div>
-                <div>
-                    Got any more questions?
-                </div>
-                <div id="email-icon">
-                </div>
-            </div>
-        </div>
+        <div id="contact-heading">LET'S MAKE YOUR PROJECT A REALITY.</div>
         <form>
             <div class="label-input">
                 <label for="name">Your Name<span class="req">*</span></label>
@@ -98,9 +91,35 @@
                 <textarea name="details" id="details" placeholder="Brief summary, timeframe, objectives, etc."
                     required></textarea>
             </div>
-            <button type="submit" id="submit-btn">SUBMIT</button>
+            <button type="submit" id="submit-btn">SEND</button>
         </form>
     </main>
+    <footer id="skill-footer">
+        <div class="footer-heading">
+            RAPHAEL &copy;ABIGAS
+        </div>
+        <div id="s-footer">
+            <div class="s-footer-container">
+                <div class="s-footer-heading">NAVIGATION</div>
+                <div class="s-footer-nav">
+                    <a href="/index.html">Home</a>
+                    <a href="/about/about.html">About</a>
+                    <a href="/works/works.html">Works</a>
+                    <a href="/contact/contact.html">Contact</a>
+                </div>
+            </div>
+            <div class="s-footer-container">
+                <div class="s-footer-heading">SOCIALS</div>
+                <div class="s-footer-nav">
+                    <a href="#">LinkedIn</a>
+                    <a href="#">Youtube</a>
+                    <a href="#">Github</a>
+                    <a href="#">Itch.io</a>
+                    <a href="#">P5.JS</a>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 <script src="/Main CSS and JS/script.js"></script>
 
