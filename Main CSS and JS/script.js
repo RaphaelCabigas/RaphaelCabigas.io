@@ -1,18 +1,42 @@
+//-----SVG GRAIN FILTER-----//
+//-----SVG GRAIN FILTER-----//
+
+const svgGrain = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+svgGrain.setAttribute("style", "position: fixed;");
+
+const filter = document.createElementNS("http://www.w3.org/2000/svg", "filter");
+filter.setAttribute("id", "grainy");
+
+const feTurbulence = document.createElementNS("http://www.w3.org/2000/svg", "feTurbulence");
+feTurbulence.setAttribute("type", "turbulence");
+feTurbulence.setAttribute("baseFrequency", "0.6");
+
+filter.appendChild(feTurbulence);
+svgGrain.appendChild(filter);
+document.body.appendChild(svgGrain);
+
 //-----TOGGLE MENU VISIBILITY-----//
 //-----TOGGLE MENU VISIBILITY-----//
 
 const menuList = document.getElementById("menu-container");
 const menuBtn = document.getElementById("menu-btn");
+const closeBtn = document.getElementById("close-btn");
+// Initialize the menu container to not be displayed first in the screen
+menuList.style.display = "none";
 
-function toggleMenu() {
-    if (menuList.style.display === "none" || menuList.style.display === "") {
-        menuList.style.display = "flex";
-    } else {
-        menuList.style.display = "none";
-    }
+// Open function
+function openMenu() {
+    menuList.style.display = "flex";
+    menuList.style.animation = "menuAnimationIn 1s ease forwards";
 }
 
-menuBtn.addEventListener("click", toggleMenu);
+// Close function
+function closeMenu() {
+    menuList.style.animation = "menuAnimationOut 1s ease forwards";
+}
+
+menuBtn.addEventListener("click", openMenu);
+closeBtn.addEventListener("click", closeMenu);
 
 //-----DARK MODE & LIGHT MODE-----//
 //-----DARK MODE & LIGHT MODE-----//
@@ -25,6 +49,7 @@ const dark = document.getElementById('dark-mode');
 // Light Mode Function which adds the light-mode class from the body 
 // which will change all the colors with their corresponding theme
 function lightMode() {
+    content.classList.remove('dark-mode');
     content.classList.add('light-mode');
     // This line of code helps with forcing the styles to be applied first before loaded
     // I used this to remove theme mode transitions so any other theme applied before will not transition first
@@ -37,6 +62,7 @@ function lightMode() {
 // and will revert back to the original starting theme
 function darkMode() {
     content.classList.remove('light-mode');
+    content.classList.add('dark-mode')
     // I used this to remove theme mode transitions so any other theme applied before will not transition first
     void content.offsetWidth
     document.body.style.transition = ' 1s cubic-bezier(0.19, 1, 0.22, 1)';
@@ -72,10 +98,21 @@ document.addEventListener('mousemove', (e) => {
     cursorShape.style.top = (e.pageY - scrollY) + 'px';
 })
 
+// selects all anchor tags and menu and close button
+const hoverableElements = document.querySelectorAll('a, #menu-btn, #close-btn');
 
-
-//-----ROTATING TEXT ANIMATION-----//
-//-----ROTATING TEXT ANIMATION-----//
-
-const circleText = document.querySelector(".circle-txt");
-circleText.innerHTML = circleText.innerText.split('').map((char, i) => `<span style="transform:rotate(${i * 10.6}deg)">${char}</span>`).join('');
+// Cursor Style condition function
+function cursorCondition(size, color) {
+    cursorShape.style.backgroundColor = color;
+    cursorShape.style.transform = size;
+}
+hoverableElements.forEach(hoverableElements => {
+    // For every hoverable element we add an event listener when the mouse enters it will scale up by 3 and add a background color
+    hoverableElements.addEventListener('mouseenter', () => {
+        cursorCondition('scale(3)', "#cac9c9");
+    });
+    // And when leaving the cursor will revert back and apply a transparent background color
+    hoverableElements.addEventListener('mouseleave', () => {
+        cursorCondition('scale(1)', 'transparent');
+    });
+});
