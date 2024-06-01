@@ -26,28 +26,56 @@ footer {
     flex-direction: column;
     justify-content: center;
     text-wrap: balance;
-    gap: 130px;
+
 }
 
 .works-heading {
     font-family: Mont-H;
     font-size: 120px;
+    line-height: 0.9;
+    -webkit-text-stroke: 1px var(--white-clr);
+    color: transparent;
+    transform: scaleY(2);
     text-transform: uppercase;
+}
+
+#works-heading-container {
     position: relative;
-}
-
-.works-hero-text {
-    font-family: Mont-EL;
-    font-size: 20px;
-    text-transform: none;
-    text-align: left;
-    position: absolute;
-}
-
-#scroll-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-wrap: balance;
+}
+
+#shapes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.box-shape {
+    width: 100%;
+    height: 100%;
+    background-color: var(--white-clr);
+}
+
+.works-hero-text {
+    font-size: 20px;
+    font-weight: 900;
+    color: var(--white-clr);
+    top: 180px;
+    left: 45px;
+    display: flex;
+    position: absolute;
+    text-transform: uppercase;
+}
+
+#scroll-wrapper {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: -60px;
     gap: 10px;
 }
 
