@@ -34,6 +34,11 @@ html {
 
 }
 
+#colored-heading {
+    -webkit-text-stroke: 0;
+    color: var(--accent-clr);
+}
+
 .skills-heading {
     font-family: Mont-H;
     font-size: 120px;
