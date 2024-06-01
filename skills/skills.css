@@ -30,28 +30,58 @@ html {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 130px;
+    text-wrap: balance;
+
 }
 
 .skills-heading {
     font-family: Mont-H;
     font-size: 120px;
+    line-height: 0.9;
+    -webkit-text-stroke: 1px var(--white-clr);
+    color: transparent;
+    transform: scaleY(2);
     text-transform: uppercase;
+}
+
+#skills-heading-container {
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-wrap: balance;
 }
 
-.skills-hero-text {
-    font-family: Mont-EL;
-    font-size: 20px;
-    text-transform: none;
-    text-align: left;
+#shapes {
     position: absolute;
-}
-
-#scroll-wrapper {
+    width: 540px;
+    top: -100px;
+    right: -0px;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: row;
+}
+
+.skills-hero-text {
+    font-size: 20px;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+    color: var(--white-clr);
+    top: 85px;
+    left: 10px;
+    display: flex;
+    position: absolute;
+    text-transform: uppercase;
+}
+
+#scroll-wrapper {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: -150px;
     gap: 10px;
 }
 
@@ -92,20 +122,8 @@ html {
 /*----------SUBSKILLS SECTION--------*/
 /*----------SUBSKILLS SECTION--------*/
 
-.xl-skill-heading {
+.skill-heading {
     font-size: 120px;
-    text-align: center;
-    text-transform: uppercase;
-    writing-mode: vertical-lr;
-    text-orientation: upright;
-}
-
-.l-skill-heading {
-    font-size: 120px;
-}
-
-#cc-heading {
-    font-size: 100px;
 }
 
 .skills-container {
@@ -127,7 +145,7 @@ html {
 }
 
 .skill-item {
-    font-size: 25px;
+    font-size: 30px;
     letter-spacing: 6px;
     color: transparent;
     -webkit-text-stroke: 1px var(--white-clr);
@@ -135,7 +153,7 @@ html {
 
 .skill-text {
     font-family: Mont-EL;
-    font-size: 30px;
+    font-size: 40px;
     text-wrap: balance;
 }
 

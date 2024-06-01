@@ -51,6 +51,22 @@ footer {
     letter-spacing: 0.8px;
 }
 
+#about-name {
+    text-decoration: underline;
+    font-style: italic;
+}
+
+#resume-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.resume-shapes {
+    width: 100px;
+    height: 100px;
+}
+
 #resume-btn {
     display: inline-block;
     margin-top: 30px;

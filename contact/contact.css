@@ -22,9 +22,36 @@ footer {
 }
 
 #contact-heading {
-    font-size: 85px;
+    font-size: 70px;
     text-wrap: balance;
 }
+
+#contact-heading-container {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+#email {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#email-text {
+    font-size: 25px;
+}
+
+#email>a {
+    font-size: 20px;
+    font-family: Mont-EL;
+    transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+#email>a:hover {
+    letter-spacing: 2px;
+}
+
 
 body {
     --asterisk-clr: #f99595;
