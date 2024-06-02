@@ -1,3 +1,28 @@
+// Initialize the urls
+const preloadImageArray = [
+    './images/chefgreen.png',
+    './images/frieren.png',
+    './images/sampler.png',
+    './images/petrol.png',
+    './images/bathspa-c.jpg',
+    './images/bathspa-f.jpg',
+    './images/bathspa-c.jpg',
+    './images/plato.jpg',
+    './images/orange.jpg',
+    './images/audiovisual.jpg',
+];
+
+// Preload Image Function
+function loadImage(loadurls) {
+    loadurls.forEach(loadurl => {
+        const image = new Image();
+        image.src = loadurl;
+    });
+}
+
+// Preloads the images based on the urls in the array
+loadImage(preloadImageArray);
+
 // Initialize the imageboxes and imagelinks
 const imageBoxes = ['#wd-image', '#ux-image', '#cc-image'];
 const imageLinks = ['.wd-link', '.ux-link', '.cc-link'];
