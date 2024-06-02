@@ -296,7 +296,7 @@ section {
     align-items: center;
 }
 
-#music-btn {
+.music-btn {
     width: 300px;
     height: 300px;
     background: conic-gradient(var(--white-clr), var(--navyblue-clr), var(--accent-clr), var(--navyblue-clr));
@@ -306,6 +306,10 @@ section {
     position: relative;
 }
 
+#music-btn2 {
+    animation: SpinDisc2 3s linear infinite;
+}
+
 @keyframes SpinDisc {
     0% {
         transform: rotate(0deg);
@@ -313,6 +317,16 @@ section {
 
     100% {
         transform: rotate(360deg);
+    }
+}
+
+@keyframes SpinDisc2 {
+    0% {
+        transform: rotate(360deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
     }
 }
 

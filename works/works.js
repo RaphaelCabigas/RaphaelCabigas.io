@@ -55,4 +55,3 @@ gsap.fromTo('#shapes', { x: -800, }, { x: 0, delay: 0.19, ease: 'ease' })
 gsap.fromTo('.works-hero-text', { opacity: 0, }, { opacity: 1, delay: 0.2, ease: 'ease' })
 gsap.fromTo('.works-heading', { x: -800, }, { x: 0, ease: 'back.Out' })
 gsap.fromTo('#scroll-wrapper', { opacity: 0, }, { opacity: 1, delay: 0.5, ease: 'ease' })
-

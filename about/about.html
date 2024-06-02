@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="/Main CSS and JS/style.css">
 </head>
 
-<body>
+<body style="visibility: hidden;">
     <div class="page-transition" id="abt-transition"></div>
     <!-----LOGO----->
     <a href="../index.html" id="logo">RC3</a>
@@ -358,6 +358,7 @@
     gsap.fromTo('#img-container', { transform: 'scale3d(0,0,0)' }, { transform: 'scale3d(1,1,1)', ease: 'power1.out' });
     gsap.fromTo('#cv-btn', { y: 500 }, { y: 0, delay: 0.1, ease: 'power1.out' });
     gsap.fromTo('.cv-shapes', { y: 500 }, { y: 0, delay: 0.2, ease: 'power1.out', stagger: 0.05 });
+
 </script>
 
 </html>
