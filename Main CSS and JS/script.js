@@ -45,9 +45,8 @@ closeBtn.addEventListener("click", closeMenu);
 //-----DARK MODE & LIGHT MODE-----//
 
 const content = document.body;
-const light = document.getElementById('light-mode');
-const dark = document.getElementById('dark-mode');
-
+const light = document.getElementsByClassName('light-mode');
+const dark = document.getElementsByClassName('dark-mode');
 
 // Light Mode Function which adds the light-mode class from the body 
 // which will change all the colors with their corresponding theme
