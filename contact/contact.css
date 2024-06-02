@@ -1,3 +1,17 @@
+#cnt-transition {
+    animation: cnt-animate 1s ease forwards;
+}
+
+@keyframes cnt-animate {
+    0% {
+        transform: translateY(0%);
+    }
+
+    100% {
+        transform: translateY(-100%);
+    }
+}
+
 main,
 footer {
     height: 100vh;

@@ -85,7 +85,7 @@ if (lastSavedTheme === 'dark') {
 //-----CUSTOM CURSOR CREATION-----//
 //-----CUSTOM CURSOR ANIMATION-----//
 
-// Creates a div element
+// Creates a div element 
 const cursorShape = document.createElement('div');
 
 // Adds a class named cursor
@@ -98,12 +98,12 @@ document.body.appendChild(cursorShape);
 document.addEventListener('mousemove', (e) => {
     const scrollX = window.scrollX;
     const scrollY = window.scrollY;
-    cursorShape.style.left = (e.pageX - scrollX) + 'px';
-    cursorShape.style.top = (e.pageY - scrollY) + 'px';
+    cursorShape.style.left = (e.pageX - scrollX + -10) + 'px';
+    cursorShape.style.top = (e.pageY - scrollY - 10) + 'px';
 })
 
-// selects all anchor tags and menu and close button
-const hoverableElements = document.querySelectorAll('a, #menu-btn, #close-btn');
+// selects all anchor tags and menu, close, cv, submit, light and dark mode button
+const hoverableElements = document.querySelectorAll('a, #menu-btn, #close-btn, #cv-btn, #submit-btn, #light-mode, #dark-mode');
 
 // Cursor Style condition function
 function cursorCondition(size, color) {
@@ -113,7 +113,7 @@ function cursorCondition(size, color) {
 hoverableElements.forEach(hoverableElements => {
     // For every hoverable element we add an event listener when the mouse enters it will scale up by 3 and add a background color
     hoverableElements.addEventListener('mouseenter', () => {
-        cursorCondition('scale(3)', "#cac9c9");
+        cursorCondition('scale(4)', "#cac9c9");
     });
     // And when leaving the cursor will revert back and apply a transparent background color
     hoverableElements.addEventListener('mouseleave', () => {

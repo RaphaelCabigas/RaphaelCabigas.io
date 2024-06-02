@@ -8,7 +8,7 @@ circleText.innerHTML = circleText.innerText.split('').map((char, i) => {
     // For each character, a span element will be created with a transform rotation style
     return `<span style="transform:rotate(${i * 9}deg)">${char}</span>`
     // The rotation degree will increase for each character which will be evenly spread around the circle
-    // And then all of the span elements will return into a single concatenated string that will create the rotating text animation
+    // And then all of the span elements will join together as a single string that will create the rotating text animation
 }).join('');
 
 //-----TEXT ENTER ANIMATION-----//
@@ -40,11 +40,3 @@ gsap.fromTo('#contact-txt', { y: 100 }, { y: 0, delay: 0.5, duration: 1, ease: '
 
 // EXPERTISE TEXT
 gsap.fromTo("#expertise>div", { x: -200 }, { x: 0, delay: 0.5, duration: 1, ease: 'ease', stagger: -0.6, });
-
-/*TEXT CAROUSEL used for future
-var carousel = gsap.to(".text-carousel",
-    {
-        xPercent: -100, repeat: -1, duration: 10,
-        ease: "linear"
-    }).totalProgress(0.5); */
-

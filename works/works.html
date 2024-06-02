@@ -5,11 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Raphael Cabigas Portfolio: Works</title>
+    <link rel="shortcut icon" href="/Main CSS and JS/favicon.ico" type="image/x-icon">
+    <!-----WORKS STYLESHEET----->
     <link rel="stylesheet" href="works.css">
     <link rel="stylesheet" href="/Main CSS and JS/style.css">
 </head>
 
 <body>
+    <div class="page-transition" id="wrks-transition"></div>
     <!-----LOGO----->
     <a href="../index.html" id="logo">RC3</a>
 
@@ -160,28 +163,33 @@
             </div>
         </section>
         <section>
-            <div class="work-details">
+            <div class="work-details left-details">
                 <div id="webdev-container" class="image-container">
-                    <img id="wd-image"></img>
+                    <img id="wd-image" rel="preload"></img>
                 </div>
                 <h2 class="work-category">
                     WEB DEVELOPMENT
                 </h2>
             </div>
             <div class="right-container">
-                <div class="items">
+                <div class="items right-items">
                     <a id="chef-green" class="wd-link" target="_blank"
                         href="https://github.com/Bath-Spa-Students/web-dev-1-a1-set-exercises-RaphaelCabigas/tree/main/Chapter-1-Introduction%20to%20HTML%20and%20CSS/Exercises/Recipe%20Page"
-                        aria-label="Chef Green Recipe Page">Chef Green</a>
+                        aria-label="Chef Green Recipe Page"><span class=" tags">HTML & CSS (January
+                            2024)</span>Chef
+                        Green</a>
                     <a id="frieren" class="wd-link" target="_blank"
                         href="https://github.com/Bath-Spa-Students/web-dev-1-a1-set-exercises-RaphaelCabigas/tree/main/Chapter-2-Links%20and%20navigation/Exercises/Multi-page%20Website"
-                        aria-label="Frieren Multi-page Website">Frieren</a>
+                        aria-label="Frieren Multi-page Website"><span class=" tags">HTML & CSS (February
+                            2024)</span>Frieren</a>
                     <a id="soundboard" class="wd-link" target="_blank"
                         href="https://github.com/Bath-Spa-Students/web-dev-1-a1-set-exercises-RaphaelCabigas/tree/main/Chapter-5-Embedded%20Content/Exercises/Advanced%20Alan%20Partridge%20Soundboard"
-                        aria-label="Alan Partidge Soundboard">SoundBoard</a>
+                        aria-label="Alan Partidge Soundboard"><span class=" tags">Front-end Web Dev (March
+                            2024)</span>SoundBoard</a>
                     <a id="petrol" class="wd-link" target="_blank"
                         href="https://github.com/Bath-Spa-Students/web-dev-1-a1-set-exercises-RaphaelCabigas/tree/main/Chapter-6-Javascript/Exercises/Petrol%20Calculator"
-                        aria-label="Petrol Calculator">Petrol</a>
+                        aria-label="Petrol Calculator"><span class=" tags">Front-end Web Dev (March
+                            2024)</span>Petrol</a>
                 </div>
                 <div class="work-links">
                     <div class="links-text">See more at:</div>
@@ -203,42 +211,52 @@
             </div>
         </section>
         <section id="ux-section">
-            <div class="left-container items" id="right-items">
+            <div class="left-container items" id="left-items">
                 <a id="bathspa-c" class="ux-link" target="_blank" href="https://raphaelcabigas.my.canva.site/"
-                    aria-label="BSU RAK Canva Homepage & Creative Computing Page">BSU RAK Canva</a>
+                    aria-label="BSU RAK Canva Homepage & Creative Computing Page">
+                    <span class=" tags">(November 2023) Web Redesign, Canva</span>BSU RAK
+                </a>
                 <a id="bathspa-f" class="ux-link" target="_blank"
                     href="https://www.figma.com/proto/ljK2gCPg7VoB8KG8X2fsCH/BATHSPA-HOME-PAGE-%26-CREATIVE-COMPUTING-PAGE?node-id=10-2&t=GlPwa58m5cB4wxlF-1&scaling=min-zoom&page-id=0%3A1&starting-point-node-id=10%3A2"
-                    aria-label="BSU RAK Figma Homepage & Creative Computing Page">BSU RAK Figma</a>
-                <a id="tasikaso" class="ux-link" target="_blank"
-                    href="https://www.figma.com/design/kvZ3uHDqjvmj493CpNoGXw/TASIKASO?node-id=0-1&t=uDtJf5bDObpHfPXz-1"
-                    aria-label="Tasikaso App Design">Tasikaso</a>
+                    aria-label="BSU RAK Figma Homepage & Creative Computing Page"> <span class=" tags">(December
+                        2023) Web Redesign, Figma</span>
+                    BSU RAK
+                </a>
             </div>
             <div class="work-details" id="right-details">
                 <div id="userx-container" class="image-container">
-                    <img id="ux-image"></img>
+                    <img id="ux-image" rel="preload"></img>
                 </div>
                 <h2 class="work-category">
-                    UX DESIGN
+                    WEB DESIGN
                 </h2>
             </div>
         </section>
         <section>
-            <div class="work-details">
+            <div class="work-details left-details">
                 <div id="creativec-container" class="image-container">
-                    <img id="cc-image"></img>
+                    <img id="cc-image" rel="preload"></img>
                 </div>
                 <h2 class="work-category">
                     CREATIVE CODING
                 </h2>
             </div>
             <div class="right-container">
-                <div class="items">
-                    <a id="plato" class="cc-link" target="_blank" href=""
-                        aria-label="Plato's Drive Thru Interactive Story">Plato's
+                <div class="items right-items">
+                    <a id="plato" class="cc-link" target="_blank"
+                        href="https://raphaelcabigas.itch.io/platos-drive-thru"
+                        aria-label="Plato's Drive Thru Interactive Story"><span class=" tags">Twine,
+                            Non-linear Interactive (November
+                            2023)</span>Plato's
                         Drive Thru</a>
-                    <a id="orange" class="cc-link" target="_blank" href=""
-                        aria-label="Codename Orange Maze Game">Codename: Orange</a>
-                    <a id="audiovisual" class="cc-link" target="_blank" href="" aria-label="Audio Visualization">Audio
+                    <a id="orange" class="cc-link" target="_blank"
+                        href="https://raphaelcabigas.itch.io/codename-orange-3d-version"
+                        aria-label="Codename Orange Pixel Game"><span class=" tags">Bitsy, Pixel Maze Game
+                            (December 2023)</span>Codename:
+                        Orange</a>
+                    <a id="audiovisual" class="cc-link" target="_blank"
+                        href="https://editor.p5js.org/RaphaelCabigas/full/UutrBL7Gt"
+                        aria-label="Audio Visualization"><span class=" tags">P5.JS (April 2024)</span>Audio
                         Visualization</a>
                 </div>
                 <div class="work-links">
@@ -264,7 +282,6 @@
                             y="0px" width="50px" height="50px" viewBox="0 0 250 120" enable-background="new 0 0 250 114"
                             xml:space="preserve">
                             <g>
-
                                 <path d="M16.254,27.631v7.998h0.359c0.715-1.113,1.65-2.248,2.805-3.402c1.153-1.154,2.567-2.188,4.239-3.105
                            c1.671-0.912,3.561-1.67,5.671-2.268c2.107-0.596,4.477-0.896,7.103-0.896c4.06,0,7.8,0.777,11.223,2.328
                            c3.422,1.555,6.368,3.684,8.836,6.389c2.466,2.707,4.376,5.891,5.73,9.551c1.353,3.662,2.03,7.602,2.03,11.82
@@ -317,28 +334,28 @@
         <section id="music-section">
             <div id="music-container">
                 <div id="big-heading">
-                    <div>I</div>
+                    <div class="multiple-headings">I</div>
                     <div class="big-lines">
                         <hr>
                         <hr>
                         <hr>
                         <hr>
                     </div>
-                    <div>ALSO</div>
+                    <div class="multiple-headings">ALSO</div>
                     <div class="big-lines">
                         <hr>
                         <hr>
                         <hr>
                         <hr>
                     </div>
-                    <div>DO</div>
+                    <div class="multiple-headings">DO</div>
                 </div>
                 <div id="music-content">
                     <div id="small-heading">
-                        <div>
+                        <div class="multiple-headings">
                             A BIT OF
                         </div>
-                        <div>
+                        <div class="multiple-headings">
                             MUSIC
                         </div>
                         <div id="box">
@@ -412,10 +429,13 @@
             </div>
         </div>
     </footer>
+
 </body>
 <!--GSAP-->
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 <script src="/Main CSS and JS/script.js"></script>
 <script src="./works.js"></script>
+<script>
+</script>
 
 </html>

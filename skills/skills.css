@@ -1,20 +1,21 @@
+#skls-transition {
+    animation: skls-animate 1s ease forwards;
+}
+
+@keyframes skls-animate {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
 section {
     height: 100vh;
     width: 80vw;
     margin-inline: auto;
-    gap: 130px;
-    scroll-snap-align: start;
-}
-
-footer {
-    scroll-snap-align: end;
-}
-
-body,
-html {
-    scroll-snap-type: y proximity;
-    scroll-behavior: smooth;
-
 }
 
 .skills-section {

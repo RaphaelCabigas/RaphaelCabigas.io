@@ -5,12 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Raphael Cabigas Portfolio: Skills</title>
+    <link rel="shortcut icon" href="/Main CSS and JS/favicon.ico" type="image/x-icon">
+    <!-----SKILLS STYLESHEET----->
     <link rel="stylesheet" href="skills.css">
     <link rel="stylesheet" href="/Main CSS and JS/style.css">
 </head>
 
 <body>
-
+    <div class="page-transition" id="skls-transition"></div>
     <!-----LOGO----->
     <a href="../index.html" id="logo">RC3</a>
 
@@ -75,8 +77,6 @@
             </div>
         </div>
     </div>
-
-    <!-----SKILLS----->
     <main>
         <section id="skills-hero">
             <div id="skills-heading-container">
@@ -165,7 +165,7 @@
         </section>
         <section class="skills-section">
             <div class="skills-container">
-                <h2 class="skill-heading">UX DESIGN</h2>
+                <h2 class="skill-heading">WEB DESIGN</h2>
                 <div class="skills-details">
                     <p class="skill-text">Empathizing with users' needs and preferences and turning those insights
                         into accessible design solutions.
@@ -184,7 +184,8 @@
             <div class="skills-container">
                 <h2 class="skill-heading">CREATIVE CODING</h2>
                 <div class="skills-details">
-                    <p class="skill-text">Creating generative and interactive art, visualizers, and games, closing the
+                    <p class="skill-text">Creating generative and interactive art, visualizers, and games, closing
+                        the
                         gap between
                         technology with art.</p>
                     <div class="skills-list">
@@ -252,5 +253,12 @@
 <!--GSAP-->
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 <script src="/Main CSS and JS/script.js"></script>
+<script>
+    // Skills Hero Animation
+    gsap.fromTo(".skills-heading", { x: -2000 }, { x: 0, duration: 1.2, ease: "ease" });
+    gsap.fromTo(".skills-hero-text", { opacity: 0 }, { opacity: 1, delay: 0.5, duration: 1.2, ease: "ease" });
+    gsap.fromTo("#shapes", { x: 1000 }, { x: 0, duration: 1.2, ease: "ease" });
+    gsap.fromTo('#scroll-wrapper', { opacity: 0, }, { opacity: 1, delay: 0.5, ease: 'ease' })
+</script>
 
 </html>

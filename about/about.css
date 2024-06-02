@@ -1,15 +1,15 @@
-section {
-    scroll-snap-align: start;
+#abt-transition {
+    animation: abt-animate 1s ease forwards;
 }
 
-body,
-html {
-    scroll-snap-type: y proximity;
-    scroll-behavior: smooth;
-}
+@keyframes abt-animate {
+    0% {
+        transform: translateY(0%);
+    }
 
-footer {
-    scroll-snap-align: end;
+    100% {
+        transform: translateY(100%);
+    }
 }
 
 /*--------ABOUT SECTION--------*/
@@ -34,12 +34,12 @@ footer {
 
 #heading {
     font-size: 110px;
-    text-wrap: nowrap;
+    white-space: nowrap;
 }
 
 #img-container {
     width: 100%;
-    height: 100%;
+    height: 85%;
     background-color: black;
 }
 
@@ -52,33 +52,32 @@ footer {
 }
 
 #about-name {
-    text-decoration: underline;
     font-style: italic;
 }
 
-#resume-container {
+#cv-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.resume-shapes {
+.cv-shapes {
     width: 100px;
     height: 100px;
 }
 
-#resume-btn {
-    display: inline-block;
-    margin-top: 30px;
-    padding: 20px;
+#cv-btn {
+    font-size: 20px;
+    padding: 33px;
     border: 1px solid var(--white-clr);
     transition: 1s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
-#resume-btn:hover {
+#cv-btn:hover {
     color: var(--navyblue-clr);
     background-color: var(--accent-clr);
     border: 1px solid var(--navyblue-clr);
+    cursor: pointer;
 }
 
 /*----------EDUCATION SECTION--------*/
@@ -95,6 +94,12 @@ footer {
     gap: 0;
 }
 
+#edu-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 #edu-heading {
     font-size: 120px;
 }
@@ -105,7 +110,7 @@ footer {
 }
 
 .edu-details-container {
-    border: 1px dashed;
+    border: 1px solid var(--white-clr);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -113,7 +118,8 @@ footer {
 
 .edu-wrapper {
     width: 80%;
-    padding: 30px;
+    padding: 40px;
+    overflow: hidden;
 }
 
 .country,
@@ -124,6 +130,14 @@ footer {
 .school-name,
 .course {
     font-size: 25px;
+    overflow: hidden;
+}
+
+.school-year,
+.country {
+    font-family: Mont-EL;
+    font-weight: 900;
+    overflow: hidden;
 }
 
 /*--------FOOTER-------*/
