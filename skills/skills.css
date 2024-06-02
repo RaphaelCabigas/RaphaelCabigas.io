@@ -151,10 +151,16 @@ section {
 }
 
 .skill-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     font-size: 30px;
     letter-spacing: 6px;
-    color: transparent;
-    -webkit-text-stroke: 1px var(--white-clr);
+}
+
+.bullet-shapes {
+    width: 30px;
+    height: 30px;
 }
 
 .skill-text {

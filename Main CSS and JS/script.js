@@ -103,7 +103,7 @@ document.addEventListener('mousemove', (e) => {
 })
 
 // selects all anchor tags and menu, close, cv, submit, light and dark mode button
-const hoverableElements = document.querySelectorAll('a, #menu-btn, #close-btn, #cv-btn, #submit-btn, #light-mode, #dark-mode');
+const hoverableElements = document.querySelectorAll('a, h1, h2, #menu-btn, #close-btn, #cv-btn, #submit-btn, #light-mode, #dark-mode');
 
 // Cursor Style condition function
 function cursorCondition(size, color) {

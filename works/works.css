@@ -299,7 +299,7 @@ section {
 #music-btn {
     width: 300px;
     height: 300px;
-    background: conic-gradient(white, #9e9e9e, rgb(67, 67, 67), black);
+    background: conic-gradient(var(--white-clr), var(--navyblue-clr), var(--accent-clr), var(--navyblue-clr));
     border-radius: 50%;
     animation: SpinDisc 3s linear infinite;
     border: none;
