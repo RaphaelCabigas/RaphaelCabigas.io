@@ -213,7 +213,7 @@ section {
     animation-timing-function: linear;
     animation-duration: 10s;
     animation-iteration-count: infinite;
-    left: max(calc(850px * 2), 100%);
+    left: calc(850px * 2);
     animation-name: scrollLeft;
 }
 
